@@ -1,15 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { GRID_DATA_ITEMS} from './data'
+import Link from 'next/link';
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +10,25 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
+      <body className="flex justify-center items-center min-h-screen font-sans antialiased">
+        <div className="w-full max-w-[1000px] flex flex-col items-center pt-6 pb-6 px-4">
+          
+          <div className="w-full bg-slate-200/75 shadow-md rounded-lg p-6">
+            <h2 className="text-2xl font-bold text-center mb-6 underline decoration-4 decoration-blue-400">MUSIC</h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
+              {GRID_DATA_ITEMS.map(({ id, attributes }) => (
+                <Link key={id} href={attributes.href} className="group">
+                  <div className={`${attributes.background} w-40 h-40 flex items-end justify-center border-2 border-black rounded-lg transition-transform group-hover:scale-105`}>
+                    <span className="text-white font-semibold mb-2 text-center">{attributes.text}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <main className="w-full mt-10">{children}</main>
+        </div>
       </body>
     </html>
   );
