@@ -3,9 +3,7 @@ import Followers from './followers';
 
 export default function Page() {
   return (
-    <div className={`w-full flex flex-col justify-center items-center p-5 lg:p-10 text-md lg:text-xl bg-gradient-to-b from-slate-200 to-blue-300`}>
-      <h2 className="text-2xl font-bold text-center mb-6 underline decoration-4 decoration-blue-400">Let's hang around</h2>
-      <div>
+      <>
         <div>
             Find my latest projects, upcoming live events, and releases!
         </div>
@@ -29,8 +27,7 @@ export default function Page() {
         <div>
             Reach out for inquiries at <span className="underline">davidkandomusic@gmail.com</span>
         </div>
-      </div>
-      
-    </div>
+      </>
+
   )
 }

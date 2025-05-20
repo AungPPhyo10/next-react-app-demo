@@ -1,7 +1,7 @@
 'use client';
 import postContact from './post-contact' 
 import {useState, useTransition} from 'react'
-import Spinner from './spinner'
+import Spinner from '../../../components/spinner'
 
 export default function Form() {
     const [message, setMessage] = useState("");
