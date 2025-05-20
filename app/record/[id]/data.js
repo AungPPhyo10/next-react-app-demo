@@ -1,13 +1,11 @@
-// import * as embeds from './embeds';
-import { SUTS_ID, POISON_WORMS_ID, IN_PERPETUITY_ID } from 'app/data';
+import * as embeds from './embeds';
+import { POISON_WORMS_ID, IN_PERPETUITY_ID } from '../../data';
 
-export const SUTS_TITLE = 'Set Up the Switch';
 export const POISON_WORMS_TITLE = 'Poison Worms';
 export const IN_PERPETUITY_TITLE = 'In Perpetuity';
 export const NAV_TITLE_ID = "nav-title";
 
 export const SEGMENT_TITLES_MAP = {
-  [SUTS_ID]: SUTS_TITLE,
   [POISON_WORMS_ID]: POISON_WORMS_TITLE,
   [IN_PERPETUITY_ID]: IN_PERPETUITY_TITLE,
   'lyrics': 'Lyrics',
@@ -15,79 +13,10 @@ export const SEGMENT_TITLES_MAP = {
 };
 
 export const findIdByPathname = (pathname) => (
-  [SUTS_ID, POISON_WORMS_ID, IN_PERPETUITY_ID].find(id => pathname.includes(id))
+  [POISON_WORMS_ID, IN_PERPETUITY_ID].find(id => pathname.includes(id))
 );
 
 export const RECORDS_MAP = {
-  [SUTS_ID]: {
-    id: SUTS_ID,
-    title: SUTS_TITLE,
-    background: `bg-[url('/suts_background.png')] bg-contain`,
-    date: '11/3/23',
-    by: 'David Kando',
-    blurb: 'An upbeat dance rock tune. Enjoy the swirly energetic guitars.',
-    albumImage: '/suts_1000.png',
-    recordHalfImage: '/suts_record_half.png',
-    spotifyLink: 'https://open.spotify.com/track/3MXIwkOQ5DyKJvD8aprP2o?si=8a89a4b9321042bc',
-    // Embed: embeds.SutsEmbed,
-    appleMusicLink: 'https://music.apple.com/us/album/set-up-the-switch/1711507178?i=1711507181',
-    youtubeMusicLink: 'https://www.youtube.com/watch?v=-yU1d7b8-z4',
-    lyrics: (
-      <div className="text:lg lg:text-xl p-4">
-        <div>Set up the switch</div>
-        <div>And set up the line, oh yeah</div>
-        <div>Set up the switch</div>
-        <div>And set up forget, oh yeah</div>
-        <div>You are the one who could</div>
-        <div>Never really figure it out</div>
-        <div>Yeah</div>
-        <div>So set up the switch</div>
-        <div>And set up the line oh yeah</div>
-        <br />
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-        <br />
-        <div>Untangled attire </div>
-        <div>And tangle the liar, oh yeah</div>
-        <div>Tranquil the crier</div>
-        <div>And kick in the dryer oh yeah</div>
-        <div>You are the one who could</div>
-        <div>Never really fess it up</div>
-        <div>Oh untangled attire</div>
-        <div>And tangle the liar, oh yeah</div>
-        <br />
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-        <br />
-        <div>Come on</div>
-        <div>So set up the switch</div>
-        <div>And toss out the time, oh yeah</div>
-        <div>So set up the switch</div>
-        <div>And one less goodbye, oh yeah</div>
-        <br />
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-        <div>Love</div>
-        <div>Keep me on your outline</div>
-        <div>Love</div>
-        <div>Keep me on your higher sign</div>
-      </div>
-    )
-  },
   [POISON_WORMS_ID]: {
     id: POISON_WORMS_ID,
     title: POISON_WORMS_TITLE,
@@ -98,7 +27,7 @@ export const RECORDS_MAP = {
     albumImage: '/poison_worms_1000.png',
     recordHalfImage: '/poison_worms_record_half.png',
     spotifyLink: 'https://open.spotify.com/track/7o1sArWvk2m61k6CuZKt93?si=f728d1ee64214102',
-    // Embed: embeds.PoisonWormsEmbed,
+    Embed: embeds.PoisonWormsEmbed,
     appleMusicLink: 'https://music.apple.com/us/album/poison-worms/1689163166?i=1689163167',
     youtubeMusicLink: 'https://www.youtube.com/watch?v=Lqdxm7R23c4',
     lyrics: (
@@ -193,7 +122,7 @@ export const RECORDS_MAP = {
     albumImage: '/in_perpetuity_1000.png',
     recordHalfImage: '/in_perpetuity_record_half.png',
     spotifyLink: 'https://open.spotify.com/track/0Qer5Z5ut75UJevgRC8GIK?si=2444d5d5cdcc47f1',
-    // Embed: embeds.InPerpetuityEmbed,
+    Embed: embeds.InPerpetuityEmbed,
     appleMusicLink: 'https://music.apple.com/us/album/in-perpetuity/1677926229?i=1677926230',
     youtubeMusicLink: 'https://www.youtube.com/watch?v=XhSBF2_iqL4',
     lyrics: (
