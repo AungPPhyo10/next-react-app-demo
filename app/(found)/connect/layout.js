@@ -1,4 +1,4 @@
-import LayoutStructure from '../../components/layout-structure'
+import LayoutStructure from '../../../components/layout-structure'
 
 export const metadata = { title:'Connect with music' }
 

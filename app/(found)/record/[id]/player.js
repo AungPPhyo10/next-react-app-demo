@@ -1,5 +1,5 @@
 import {Suspense} from 'react';         // fallback logic UI to load long-loading components
-import Spinner from '../../../components/spinner'
+import Spinner from '../../../../components/spinner'
 
 function Loading() {
     return (
