@@ -1,4 +1,4 @@
-'use server';
+'use server';       // for jsx functions that will do API requests  
 
 const apiKey = process.env.API_KEY;
 const secretKey = process.env.SECRET_KEY;
