@@ -31,7 +31,7 @@ export default function Page() {
             </Suspense>
             <br/>
             <div>
-                <a href={resultData.playListLink} target="_blank" className="link">Save this playlist</a>
+                <a href={resultData.playlistLink} target="_blank" className="link">Save this playlist</a>
             </div>
             <br/>
             {CONCLUSION_PART_3}
