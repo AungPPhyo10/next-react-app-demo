@@ -52,6 +52,7 @@ export default  function Page() {
     const [records, setRecords] = useState(RECORDS);
     const deferredText = useDeferredValue(text);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         const filteredRecords = RECORDS.filter((record) => record.title.includes(text));
         setRecords(filteredRecords);
