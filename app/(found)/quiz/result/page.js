@@ -18,7 +18,7 @@ export default function Page() {
 
     const result = getQuizResult({selectionMap})
     const resultData = RESULT_MAP[result];
-    if (!resultData) notFound();
+    if (!resultData) notFound();        // trigger the dynamic error catching 404 page
 
     return (
         <div>

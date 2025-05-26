@@ -1,3 +1,4 @@
+// custom catch-all route - OVERRIDES THE existing 404 page
 import Link from 'next/link';
 
 export default function NotFoundCatchAll() {
