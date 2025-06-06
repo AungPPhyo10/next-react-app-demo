@@ -16,6 +16,7 @@ function Playrow({title, href, iconImage}) {
     )
 }
 
+// memo can also be used on components 
 const Records = memo(function Records({records}) {
     if (records.length > 0) {
         return (
@@ -50,7 +51,7 @@ const Records = memo(function Records({records}) {
 export default  function Page() {
     const [text, setText] = useState("");
     const [records, setRecords] = useState(RECORDS);
-    const deferredText = useDeferredValue(text);
+    const deferredText = useDeferredValue(text);    // use the deferred value for searching only
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {

@@ -13,8 +13,10 @@ import SegmentBreadcrumbs from '../../../components/segment-breadcrumbs';
 export default function Layout({children}) {
     const pathName = usePathname();     // find out path name
     const segments = useSelectedLayoutSegments();       // get the segment array returned back
+    console.log(segments);
 
-    const id = findIdByPathname(pathName);
+    const id = findIdByPathname(pathName);      // custom path
+    console.log(id);
 
     return (
         <LayoutStructure title={<SegmentBreadcrumbs segments={segments} startingSegment="/record" segmentTitlesMap={SEGMENT_TITLES_MAP} />} >

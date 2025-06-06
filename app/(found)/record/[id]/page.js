@@ -17,7 +17,7 @@ export async function generateMetadata({params}) {
 }
 
 export default function Page({params}) {
-    const {id} = params;
+    const {id} = params;        // attach the id to the params here
     const {date, blurb, Embed} = RECORDS_MAP[id]
     
     return (

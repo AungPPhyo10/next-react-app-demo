@@ -13,7 +13,8 @@ export async function generateStaticParams() {
     return recordSegments;
 } 
 
-export default function Page({params: {id, content}}) {
+export default function Page({params}) {
+    const { id, content } = params;
     const contentJsx = RECORDS_MAP[id][content];
 
     return contentJsx;
